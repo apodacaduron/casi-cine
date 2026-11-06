@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Casi Cine",
+  "version": "0.1.36",
+  "identifier": "com.casicine.desktop",
+  "build": { "beforeDevCommand": "npm run web:dev", "devUrl": "http://localhost:1420", "beforeBuildCommand": "npm run web:build", "frontendDist": "../dist" },
+  "app": {
+    "windows": [{ "title": "Casi Cine", "width": 1240, "height": 820, "minWidth": 860, "minHeight": 640, "resizable": true, "fullscreen": false, "dragDropEnabled": true, "titleBarStyle": "Overlay", "hiddenTitle": true }],
+    "security": { "csp": null, "assetProtocol": { "enable": true, "scope": ["**"] } }
+  },
+  "bundle": { "active": true, "targets": "all", "icon": ["icons/icon.icns", "icons/icon.png"], "resources": ["../scripts/acestep_generate.py", "../scripts/install-acestep-macos.sh", "resources/geonames/cities500.txt", "resources/geonames/GEONAMES-README.txt"], "fileAssociations": [{ "ext": ["casicine"], "name": "Proyecto de Casi Cine", "description": "Proyecto local de Casi Cine", "role": "Editor" }] }
+}
